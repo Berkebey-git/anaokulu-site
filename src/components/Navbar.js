@@ -9,6 +9,7 @@ const navItems = [
   { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "Atölyeler", href: "/atolyeler" },
   { label: "Galeri", href: "/galeri" },
+  { label: "Personeller", href: "/personeller" },
   { label: "İletişim", href: "/iletisim" },
   { label: "Akademi", href: "/akademi" },
 ];
