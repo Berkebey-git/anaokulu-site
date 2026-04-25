@@ -42,7 +42,7 @@ export default function AtolyelerPage() {
           </p>
         </Reveal>
 
-        <section className="grid gap-6 md:grid-cols-2">
+        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {workshops.map((workshop) => (
             <Reveal
               key={workshop.slug}
@@ -51,7 +51,7 @@ export default function AtolyelerPage() {
               <img
                 src={workshop.image}
                 alt={workshop.title}
-                className="w-full h-48 object-cover rounded-t-xl"
+                className="h-[200px] w-full rounded-t-xl object-cover md:h-[260px] lg:h-[300px]"
               />
               <div className="p-6">
                 <h2 className="text-2xl font-semibold text-slate-900">{workshop.title}</h2>

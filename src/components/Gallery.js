@@ -82,14 +82,14 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="bg-gray-100 px-6 py-16">
+      <section className="bg-gray-100 px-4 py-16">
         <Reveal className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold text-gray-900">Etkinliklerimiz</h2>
         <p className="mt-3 text-center text-gray-700">
           Çocuklarımızın günlük aktivitelerinden kareler
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryItems.map((item) => (
             <article
               key={item.title}
@@ -104,7 +104,7 @@ export default function Gallery() {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="h-[200px] w-full object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
                 />
               </button>
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/55 via-black/10 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">
@@ -133,7 +133,11 @@ export default function Gallery() {
             >
               X
             </button>
-            <img src={selectedItem.image} alt={selectedItem.alt} className="max-h-[80vh] w-full object-cover" />
+            <img
+              src={selectedItem.image}
+              alt={selectedItem.alt}
+              className="h-[200px] w-full object-cover md:h-[300px] lg:h-[400px]"
+            />
             <div className="p-4">
               <p className="text-lg font-semibold text-slate-900">{selectedItem.title}</p>
             </div>

@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[78vh] items-center justify-center overflow-hidden">
+    <section className="relative isolate flex min-h-[60vh] items-center justify-center overflow-hidden md:min-h-[70vh] lg:min-h-[78vh]">
       <img
         src="/hero.jpg"
         alt="Anaokulu sınıf ortamı"

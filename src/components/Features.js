@@ -31,11 +31,11 @@ const workshops = [
 
 export default function Features() {
   return (
-    <section className="px-6 py-16">
+    <section className="px-4 py-16">
       <Reveal className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold text-gray-900">Atölyelerimiz</h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {workshops.map((workshop) => (
             <article
               key={workshop.title}
@@ -44,7 +44,7 @@ export default function Features() {
               <img
                 src={workshop.image}
                 alt={workshop.alt}
-                className="h-48 w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110"
+                className="h-[200px] w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">{workshop.title}</h3>

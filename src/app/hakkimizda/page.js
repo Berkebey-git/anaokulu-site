@@ -30,7 +30,7 @@ export default function HakkimizdaPage() {
       <Navbar />
 
       <main>
-        <section className="relative h-[60vh] flex items-center justify-center text-white text-center overflow-hidden">
+        <section className="relative flex h-[200px] items-center justify-center overflow-hidden text-center text-white md:h-[300px] lg:h-[400px]">
           <img src="/hero.jpg" alt="Anaokulu sınıf ortamı" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
           <Reveal className="relative z-10 px-4">
@@ -111,7 +111,7 @@ export default function HakkimizdaPage() {
               <img
                 src="/hero.jpg"
                 alt="Çocuklar için modern sınıf"
-                className="h-full w-full object-cover transition-all duration-700 hover:scale-105"
+                className="h-[200px] w-full object-cover transition-all duration-700 hover:scale-105 md:h-[300px] lg:h-[400px]"
               />
             </Reveal>
             <Reveal className="bg-white rounded-2xl p-8 shadow-lg">

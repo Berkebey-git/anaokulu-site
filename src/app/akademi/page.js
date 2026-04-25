@@ -47,7 +47,7 @@ export default function AkademiPage() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl px-4 py-16">
         <section className="text-center">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             Akademi Programlarımız
@@ -58,7 +58,7 @@ export default function AkademiPage() {
         </section>
 
         <Reveal>
-          <section className="grid grid-cols-1 gap-6 py-16 text-center md:grid-cols-2 lg:grid-cols-4">
+          <section className="grid grid-cols-1 gap-6 py-16 text-center sm:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
               <article
                 key={course.title}
@@ -68,7 +68,7 @@ export default function AkademiPage() {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="h-48 w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="h-[200px] w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
                   />
                 )}
                 <div className="p-6">
