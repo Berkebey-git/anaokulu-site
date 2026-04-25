@@ -34,10 +34,10 @@ export default function AtolyelerPage() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="max-w-6xl mx-auto py-16 px-4 space-y-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
         <Reveal className="text-center">
-          <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">Atölyelerimiz</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
+          <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">Atölyelerimiz</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600 sm:text-base md:text-lg">
             Çocuklarımızın gelişimini destekleyen etkinlikler
           </p>
         </Reveal>
@@ -46,19 +46,21 @@ export default function AtolyelerPage() {
           {workshops.map((workshop) => (
             <Reveal
               key={workshop.slug}
-              className="group overflow-hidden bg-white rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between overflow-hidden"
             >
-              <img
-                src={workshop.image}
-                alt={workshop.title}
-                className="h-[200px] w-full rounded-t-xl object-cover md:h-[260px] lg:h-[300px]"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-slate-900">{workshop.title}</h2>
-                <p className="mt-3 text-slate-700">{workshop.shortDescription}</p>
+              <div className="relative w-full h-[220px] overflow-hidden rounded-xl sm:h-[260px] md:h-[300px] lg:h-[340px]">
+                <img
+                  src={workshop.image}
+                  alt={workshop.title}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="pt-5">
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">{workshop.title}</h2>
+                <p className="mt-3 text-sm text-slate-700 sm:text-base md:text-lg">{workshop.shortDescription}</p>
                 <Link
                   href={`/atolyeler/${workshop.slug}`}
-                  className="mt-5 inline-flex rounded-lg bg-blue-600 px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+                  className="mt-5 inline-flex px-5 py-2.5 text-sm sm:text-base rounded-xl bg-blue-600 text-white transition hover:scale-105 hover:bg-blue-700"
                 >
                   Detaylı İncele
                 </Link>

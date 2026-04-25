@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Reveal from "@/components/Reveal";
+import Image from "next/image";
 
 const trustItems = [
   {
@@ -30,22 +31,22 @@ export default function HakkimizdaPage() {
       <Navbar />
 
       <main>
-        <section className="relative flex h-[200px] items-center justify-center overflow-hidden text-center text-white md:h-[300px] lg:h-[400px]">
-          <img src="/hero.jpg" alt="Anaokulu sınıf ortamı" className="absolute inset-0 h-full w-full object-cover" />
+        <section className="relative flex h-[60vh] items-center justify-center overflow-hidden text-center text-white md:h-[80vh]">
+          <Image src="/hero.jpg" alt="Anaokulu sınıf ortamı" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/40" />
           <Reveal className="relative z-10 px-4">
-            <h1 className="text-4xl font-bold sm:text-5xl">Hakkımızda</h1>
-            <p className="mx-auto mt-4 max-w-3xl text-base text-slate-100 sm:text-lg">
+            <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Hakkımızda</h1>
+            <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-100 sm:text-base md:text-lg">
               1 Akademi Anaokulu olarak çocuklarımızın güvenli, mutlu ve gelişim odaklı bir ortamda eğitim
               almasını sağlıyoruz.
             </p>
           </Reveal>
         </section>
 
-        <div className="max-w-6xl mx-auto px-4 py-16 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
           <Reveal className="rounded-2xl bg-white p-8 shadow-lg">
-            <h2 className="text-3xl font-bold text-slate-900">Biz Kimiz?</h2>
-            <div className="mt-6 space-y-4 text-slate-700 leading-7">
+            <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">Biz Kimiz?</h2>
+            <div className="mt-6 space-y-4 text-sm text-slate-700 leading-7 sm:text-base md:text-lg">
               <p>
                 1 Akademi Anaokulu olarak amacımız, çocukların sadece akademik değil, sosyal ve duygusal
                 gelişimlerini de destekleyen bir eğitim ortamı sunmaktır. Her çocuğun bireysel farklılıklarını göz
@@ -77,7 +78,7 @@ export default function HakkimizdaPage() {
             <Reveal>
               <h2 className="text-center text-3xl font-bold text-slate-900">Neden Bizi Tercih Etmelisiniz?</h2>
             </Reveal>
-            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {trustItems.map((item) => (
                 <Reveal
                   key={item.title}
@@ -106,17 +107,15 @@ export default function HakkimizdaPage() {
             </Reveal>
           </section>
 
-          <section className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <section className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Reveal className="overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src="/hero.jpg"
-                alt="Çocuklar için modern sınıf"
-                className="h-[200px] w-full object-cover transition-all duration-700 hover:scale-105 md:h-[300px] lg:h-[400px]"
-              />
+              <div className="relative w-full h-[220px] overflow-hidden rounded-xl sm:h-[260px] md:h-[300px] lg:h-[340px]">
+                <Image src="/hero.jpg" alt="Çocuklar için modern sınıf" fill className="object-cover transition-all duration-700 hover:scale-105" />
+              </div>
             </Reveal>
-            <Reveal className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold text-slate-900">Eğitim Ortamımız</h2>
-              <p className="mt-4 text-slate-700 leading-7">
+            <Reveal className="bg-white rounded-2xl p-8 shadow-lg sm:col-span-1 lg:col-span-2">
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">Eğitim Ortamımız</h2>
+              <p className="mt-4 text-sm text-slate-700 leading-7 sm:text-base md:text-lg">
                 Çocuklarımızın gelişimini destekleyen modern sınıflarımız, güvenli oyun alanlarımız ve etkileşimli
                 atölye içeriklerimiz ile öğrenmeyi hem keyifli hem de kalıcı hale getiriyoruz. Her öğrencimizin kendini
                 değerli hissettiği sıcak bir atmosfer oluşturuyor, akademik gelişimin yanı sıra sosyal becerilerini de

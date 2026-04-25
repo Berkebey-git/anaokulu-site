@@ -47,12 +47,12 @@ export default function AkademiPage() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="mx-auto w-full max-w-7xl px-4 py-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <section className="text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">
             Akademi Programlarımız
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600 sm:text-base md:text-lg">
             Çocuklar için özel ücretli eğitim programları
           </p>
         </section>
@@ -62,28 +62,30 @@ export default function AkademiPage() {
             {courses.map((course) => (
               <article
                 key={course.title}
-                className="group overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between overflow-hidden"
               >
                 {course.image && (
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="h-[200px] w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
-                  />
+                  <div className="relative w-full h-[220px] overflow-hidden rounded-xl sm:h-[260px] md:h-[300px] lg:h-[340px]">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
                 )}
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-slate-900">{course.title}</h2>
-                  <p className="mt-3 text-slate-600">{course.description}</p>
+                <div className="pt-5">
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">{course.title}</h2>
+                  <p className="mt-3 text-sm text-slate-600 sm:text-base md:text-lg">{course.description}</p>
                   <p className="mt-2 text-lg font-bold text-blue-600">{course.price}</p>
                   <div className="mt-4 flex justify-center gap-3">
                     <Link
                       href={`/kayit?course=${course.courseKey}`}
-                      className="rounded-lg bg-blue-600 px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+                      className="px-5 py-2.5 text-sm sm:text-base rounded-xl transition hover:scale-105 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
                     >
                       Kayıt Ol
                     </Link>
                     <Link href={course.detailHref}>
-                      <button className="rounded-lg border border-gray-400 bg-white px-4 py-2 font-medium text-gray-800 transition-all duration-300 hover:scale-105 hover:border-gray-600 hover:bg-gray-100">
+                      <button className="px-5 py-2.5 text-sm sm:text-base rounded-xl transition hover:scale-105 rounded-lg border border-gray-400 bg-white font-medium text-gray-800 hover:border-gray-600 hover:bg-gray-100">
                         Detaylı Bilgi
                       </button>
                     </Link>

@@ -11,31 +11,31 @@ export default function Home() {
       <main>
         <Hero />
 
-        <section className="bg-gray-100 px-6 py-16">
-          <Reveal className="mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl font-bold text-gray-900">Neler Sunuyoruz?</h2>
-            <p className="mt-3 text-center text-gray-700">
+        <section className="bg-gray-100 px-4 py-16">
+          <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">Neler Sunuyoruz?</h2>
+            <p className="mt-3 text-center text-sm text-gray-700 sm:text-base md:text-lg">
               Çocuklarınız için en iyi ortamı sunuyoruz
             </p>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-xl font-semibold text-gray-900">Modern Bina</h3>
-                <p className="mt-2 text-gray-700">
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Modern Bina</h3>
+                <p className="mt-2 text-sm text-gray-700 sm:text-base md:text-lg">
                   Ferah sınıflar ve çağdaş altyapı ile güvenli bir öğrenme alanı sağlıyoruz.
                 </p>
               </article>
 
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-xl font-semibold text-gray-900">Uzman Kadro</h3>
-                <p className="mt-2 text-gray-700">
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Uzman Kadro</h3>
+                <p className="mt-2 text-sm text-gray-700 sm:text-base md:text-lg">
                   Alanında deneyimli eğitmenlerimiz her çocuğun gelişimini yakından takip eder.
                 </p>
               </article>
 
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-xl font-semibold text-gray-900">Sevgi Dolu Ortam</h3>
-                <p className="mt-2 text-gray-700">
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Sevgi Dolu Ortam</h3>
+                <p className="mt-2 text-sm text-gray-700 sm:text-base md:text-lg">
                   Çocukların kendini mutlu ve değerli hissettiği sıcak bir atmosfer sunuyoruz.
                 </p>
               </article>
@@ -46,21 +46,21 @@ export default function Home() {
         <Features />
         <Gallery />
 
-        <section className="px-6 py-16">
-          <Reveal className="mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl font-bold text-gray-900">
+        <section className="px-4 py-16">
+          <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">
               Neden Bizi Seçmelisiniz?
             </h2>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-lg font-semibold text-gray-900">Güvenli ortam</h3>
+            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Güvenli ortam</h3>
               </article>
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-lg font-semibold text-gray-900">Deneyimli öğretmenler</h3>
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Deneyimli öğretmenler</h3>
               </article>
-              <article className="rounded-xl bg-white p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-lg font-semibold text-gray-900">Modern eğitim sistemi</h3>
+              <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-5 h-full flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">Modern eğitim sistemi</h3>
               </article>
             </div>
           </Reveal>

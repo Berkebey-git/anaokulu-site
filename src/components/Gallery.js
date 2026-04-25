@@ -83,9 +83,9 @@ export default function Gallery() {
   return (
     <>
       <section className="bg-gray-100 px-4 py-16">
-        <Reveal className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl font-bold text-gray-900">Etkinliklerimiz</h2>
-        <p className="mt-3 text-center text-gray-700">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">Etkinliklerimiz</h2>
+        <p className="mt-3 text-center text-sm text-gray-700 sm:text-base md:text-lg">
           Çocuklarımızın günlük aktivitelerinden kareler
         </p>
 
@@ -93,7 +93,7 @@ export default function Gallery() {
           {galleryItems.map((item) => (
             <article
               key={item.title}
-              className="group relative overflow-hidden rounded-xl bg-white shadow-md"
+              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-white p-2 shadow-md transition hover:shadow-xl"
             >
               <button
                 type="button"
@@ -104,7 +104,7 @@ export default function Gallery() {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="h-[200px] w-full object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
+                  className="h-[220px] w-full rounded-xl object-cover transition-transform duration-300 group-hover:scale-110 sm:h-[260px] md:h-[300px] lg:h-[340px]"
                 />
               </button>
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/55 via-black/10 to-transparent p-4 opacity-0 transition duration-300 group-hover:opacity-100">

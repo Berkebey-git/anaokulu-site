@@ -32,23 +32,25 @@ const workshops = [
 export default function Features() {
   return (
     <section className="px-4 py-16">
-      <Reveal className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl font-bold text-gray-900">Atölyelerimiz</h2>
+      <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">Atölyelerimiz</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {workshops.map((workshop) => (
             <article
               key={workshop.title}
-              className="group overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="group flex h-full flex-col justify-between overflow-hidden rounded-xl bg-white p-5 shadow-md transition hover:shadow-xl"
             >
-              <img
-                src={workshop.image}
-                alt={workshop.alt}
-                className="h-[200px] w-full rounded-t-xl object-cover transition-transform duration-300 group-hover:scale-110 md:h-[260px] lg:h-[300px]"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900">{workshop.title}</h3>
-                <p className="mt-2 text-gray-700">{workshop.description}</p>
+              <div className="relative w-full h-[220px] overflow-hidden rounded-xl sm:h-[260px] md:h-[300px] lg:h-[340px]">
+                <img
+                  src={workshop.image}
+                  alt={workshop.alt}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="pt-5">
+                <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">{workshop.title}</h3>
+                <p className="mt-2 text-sm text-gray-700 sm:text-base md:text-lg">{workshop.description}</p>
               </div>
             </article>
           ))}

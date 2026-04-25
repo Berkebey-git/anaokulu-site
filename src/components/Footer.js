@@ -16,14 +16,9 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="1 Akademi Anaokulu Logo"
-              width={120}
-              height={40}
-              className="w-[120px]"
-              style={{ height: "auto" }}
-            />
+            <div className="relative h-10 w-[120px] overflow-hidden">
+              <Image src="/logo.png" alt="1 Akademi Anaokulu Logo" fill className="object-contain" />
+            </div>
             <h3 className="text-lg font-semibold">1 Akademi Anaokulu</h3>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">

@@ -6,17 +6,17 @@ export default function IletisimPage() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="max-w-6xl mx-auto py-16 px-4 space-y-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
         <Reveal className="text-center">
-          <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">İletişim</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
+          <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">İletişim</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600 sm:text-base md:text-lg">
             Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz.
           </p>
         </Reveal>
 
-        <section className="grid gap-10 md:grid-cols-2">
+        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Reveal className="bg-white shadow-lg rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-slate-900">İletişim Bilgileri</h2>
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl md:text-3xl">İletişim Bilgileri</h2>
             <div className="mt-6 space-y-4 text-slate-700">
               <p>
                 <span className="font-semibold">📍 Adres:</span> İstanbul / Türkiye
@@ -41,8 +41,8 @@ export default function IletisimPage() {
             </div>
           </Reveal>
 
-          <Reveal className="bg-white shadow-lg rounded-xl p-6">
-            <h2 className="text-2xl font-semibold text-slate-900">Bize Mesaj Gönderin</h2>
+          <Reveal className="bg-white shadow-lg rounded-xl p-6 lg:col-span-2">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl md:text-3xl">Bize Mesaj Gönderin</h2>
             <form className="mt-6">
               <label className="mb-2 block text-sm font-medium text-slate-700" htmlFor="name">
                 Ad Soyad
@@ -50,7 +50,7 @@ export default function IletisimPage() {
               <input
                 id="name"
                 type="text"
-                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-2 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
                 placeholder="Ad Soyad"
               />
 
@@ -60,7 +60,7 @@ export default function IletisimPage() {
               <input
                 id="phone"
                 type="tel"
-                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-2 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
                 placeholder="Telefon"
               />
 
@@ -70,13 +70,13 @@ export default function IletisimPage() {
               <textarea
                 id="message"
                 rows="5"
-                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-2 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                className="mb-4 w-full rounded-md border border-slate-300 bg-white p-3 text-slate-900 placeholder-slate-500 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
                 placeholder="Mesajınızı yazın"
               />
 
               <button
                 type="submit"
-                className="rounded-lg bg-blue-600 px-6 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700"
+                className="px-5 py-2.5 text-sm sm:text-base rounded-xl transition hover:scale-105 bg-blue-600 text-white hover:bg-blue-700"
               >
                 Gönder
               </button>
