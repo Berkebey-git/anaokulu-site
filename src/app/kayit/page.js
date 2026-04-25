@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 
@@ -12,6 +12,14 @@ const courseLabelMap = {
 };
 
 export default function KayitPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 p-8 text-center">Loading...</div>}>
+      <KayitContent />
+    </Suspense>
+  );
+}
+
+function KayitContent() {
   const searchParams = useSearchParams();
   const selectedCourse = (searchParams.get("course") || "").toLowerCase();
 
